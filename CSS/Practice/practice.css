@@ -1,0 +1,26 @@
+.box{
+    background-color: rgb(255, 165, 183);
+    border: 2px solid black;
+    padding: 4px;
+    box-shadow: 5px 5px 15px 5px #3c3c3c;
+    margin: 10px;
+}
+.box2{
+    background-color: rgb(255, 165, 183);
+    /* border: 2px solid black; */
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: 2px 2px 4px #000000;
+    outline: 2px solid black;
+    outline-offset: 10px;
+}
+.list{
+    list-style: disc
+}
+p{
+    width: 20vw;
+    height: 20vh;
+    border: 3px solid black;
+    overflow: auto;
+}

@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <button class="mobile-screen-button" id="mobile-screen-button1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            style="
+              display: block;
+              height: 16px;
+              width: 16px;
+              fill: currentcolor;
+            "
+            aria-hidden="true"
+            role="presentation"
+            focusable="false"
+          >
+            <path
+              d="M13 0a13 13 0 0 1 10.5 20.67l7.91 7.92-2.82 2.82-7.92-7.91A12.94 12.94 0 0 1 13 26a13 13 0 1 1 0-26zm0 4a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"
+            ></path>
+          </svg>
+          Start your search
+        </button>
+        <div class="logo-area" id="logo-area1">
+          <div class="airbnb-logo"></div>
+        </div>
+
+        <div class="three-button-area">
+          <div class="three-buttons">
+            <button>
+              <div class="anywhere">Anywhere</div>
+            </button>
+            <button>
+              <div class="any-week">Any week</div>
+            </button>
+            <button>
+              <div class="add-guests">Add guests</div>
+            </button>
+            <div class="search-icon">
+              <img src="search-icon-svg.svg" alt="search-icon" width="40px" />
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-area">
+          <div class="airbnb-your-home">
+            <a href="#">Airbnb your Home</a>
+          </div>
+          <div class="globe-icon">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  height: 16px;
+                  width: 16px;
+                  fill: currentcolor;
+                "
+              >
+                <path
+                  d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="profilebutton">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: none;
+                  height: 20px;
+                  width: 20px;
+                  stroke: currentcolor;
+                  stroke-width: 3;
+                  overflow: visible;
+                  margin-top: 2px;
+                "
+              >
+                <g fill="none"><path d="M2 16h28M2 24h28M2 8h28"></path></g>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  height: 30px;
+                  width: 30px;
+                  fill: var(--second-text-color);
+                  margin-left: 6px;
+                "
+              >
+                <path
+                  d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="profile-area"></div>
+      </div>
+    </header>
+
+    <div class="header2">
+      <div class="search-area">
+        <div class="where">
+          <label for="where">Where</label
+          ><input type="text" placeholder="Search destinations" id="where" />
+        </div>
+        <div class="check-in">
+          <label for="check-in">Check in</label
+          ><input type="button" value="Add dates" id="check-in" />
+        </div>
+        <div class="check-out">
+          <label for="check-out">Check out</label
+          ><input type="button" value="Add dates" id="check-out" />
+        </div>
+        <div class="Who">
+          <label for="Who">Who</label
+          ><input type="button" value="Add guests" id="Who" />
+        </div>
+        <img
+          src="search-icon-svg.svg"
+          alt="search-icon-svg"
+          style="width: 60px"
+        />
+      </div>
+    </div>
+
+    
+    <div class="navbar">
+      <div class="navbar-grid">
+        <div class="flow-items">
+          <div class="icon-items amazing-pools">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
+              alt="Amazing Pools"
+              width="24"
+              height="24"
+            />
+            Amazing-Pools
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png"
+              alt="Icons"
+              width="24"
+              height="24"
+            />
+            Icons
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg"
+              alt="Country-side"
+              width="24"
+              height="24"
+            />
+            Country-side
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="OMG"
+              width="24"
+              height="24"
+            />
+            OMG
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg"
+              alt="Bed-breakfasts"
+              width="24"
+              height="24"
+            />
+            Bed-breakfasts
+          </div>
+
+          <div class="icon-items surfing">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg"
+              alt="Surfing"
+              width="24"
+              height="24"
+            />
+            Surfing
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg"
+              alt="Amazing-views"
+              width="24"
+              height="24"
+            />
+            Amazing-views
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg"
+              alt="Farms"
+              width="24"
+              height="24"
+            />
+            Farms
+          </div>
+
+          <div class="icon-items rooms">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+              alt="Rooms"
+              width="24"
+              height="24"
+            />
+            Rooms
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg"
+              alt="Beachfront"
+              width="24"
+              height="24"
+            />
+            Beachfront
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg"
+              alt="Luxe"
+              width="24"
+              height="24"
+            />
+            Luxe
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg"
+              alt="Treehouses"
+              width="24"
+              height="24"
+            />
+            Treehouses
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg"
+              alt="Cabins"
+              width="24"
+              height="24"
+            />
+            Cabins
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg"
+              alt="Top-of-the-world"
+              width="24"
+              height="24"
+            />
+            Top-of-the-world
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+              alt="Lakefront"
+              width="24"
+              height="24"
+            />
+            Lakefront
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg"
+              alt="Domes"
+              width="24"
+              height="24"
+            />
+            Domes
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg"
+              alt="Lake"
+              width="24"
+              height="24"
+            />
+            Lake
+          </div>
+
+          <div class="icon-items">
+            <img
+              class="icon-image"
+              src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg"
+              alt="National-Parks"
+              width="24"
+              height="24"
+            />
+            National-Parks
+          </div>
+        </div>
+        <div class="filters">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              style="
+                display: block;
+                fill: none;
+                height: 16px;
+                width: 16px;
+                stroke: currentColor;
+                stroke-width: 3;
+                overflow: visible;
+              "
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+            >
+              <path
+                fill="none"
+                d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"
+              ></path></svg
+            >Filters
+          </button>
+        </div>
+        <div class="taxes">
+          <div class="taxes-button">
+            Display total before taxes<img
+              src="button.png"
+              alt="switch-button"
+              width="40px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------ -->
+    <main>
+      <article>
+        <div class="container">
+          <div class="item">
+            <div class="place-image first-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Atit, India</div>
+              <div class="star">
+                <svg
+                  width="15px"
+                  height="15px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5245 3.46353C11.6741 3.00287 12.3259 3.00287 12.4755 3.46353L14.1329 8.56434C14.1998 8.77035 14.3918 8.90983 14.6084 8.90983H19.9717C20.4561 8.90983 20.6575 9.52964 20.2656 9.81434L15.9266 12.9668C15.7514 13.0941 15.678 13.3198 15.745 13.5258L17.4023 18.6266C17.552 19.0873 17.0248 19.4704 16.6329 19.1857L12.2939 16.0332C12.1186 15.9059 11.8814 15.9059 11.7061 16.0332L7.3671 19.1857C6.97524 19.4704 6.448 19.0873 6.59768 18.6266L8.25503 13.5258C8.32197 13.3198 8.24864 13.0941 8.07339 12.9668L3.73438 9.81434C3.34253 9.52964 3.54392 8.90983 4.02828 8.90983H9.39159C9.6082 8.90983 9.80018 8.77035 9.86712 8.56434L11.5245 3.46353Z"
+                    fill="#000000"
+                  /></svg
+                >4.94
+              </div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">490 kilometers away</div>
+              <div class="grey-text">2-7 May</div>
+              <div>₹159,731 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image second-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ryf="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Parra, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">540 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹513,530 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image third-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Chennai, India</div>
+              <div class="star">
+                <svg
+                  width="15px"
+                  height="15px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5245 3.46353C11.6741 3.00287 12.3259 3.00287 12.4755 3.46353L14.1329 8.56434C14.1998 8.77035 14.3918 8.90983 14.6084 8.90983H19.9717C20.4561 8.90983 20.6575 9.52964 20.2656 9.81434L15.9266 12.9668C15.7514 13.0941 15.678 13.3198 15.745 13.5258L17.4023 18.6266C17.552 19.0873 17.0248 19.4704 16.6329 19.1857L12.2939 16.0332C12.1186 15.9059 11.8814 15.9059 11.7061 16.0332L7.3671 19.1857C6.97524 19.4704 6.448 19.0873 6.59768 18.6266L8.25503 13.5258C8.32197 13.3198 8.24864 13.0941 8.07339 12.9668L3.73438 9.81434C3.34253 9.52964 3.54392 8.90983 4.02828 8.90983H9.39159C9.6082 8.90983 9.80018 8.77035 9.86712 8.56434L11.5245 3.46353Z"
+                    fill="#000000"
+                  />
+                </svg>
+                5.0
+              </div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">539 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹117,085 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image fourth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Colva, India</div>
+              <div class="star">
+                <svg
+                  width="15px"
+                  height="15px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5245 3.46353C11.6741 3.00287 12.3259 3.00287 12.4755 3.46353L14.1329 8.56434C14.1998 8.77035 14.3918 8.90983 14.6084 8.90983H19.9717C20.4561 8.90983 20.6575 9.52964 20.2656 9.81434L15.9266 12.9668C15.7514 13.0941 15.678 13.3198 15.745 13.5258L17.4023 18.6266C17.552 19.0873 17.0248 19.4704 16.6329 19.1857L12.2939 16.0332C12.1186 15.9059 11.8814 15.9059 11.7061 16.0332L7.3671 19.1857C6.97524 19.4704 6.448 19.0873 6.59768 18.6266L8.25503 13.5258C8.32197 13.3198 8.24864 13.0941 8.07339 12.9668L3.73438 9.81434C3.34253 9.52964 3.54392 8.90983 4.02828 8.90983H9.39159C9.6082 8.90983 9.80018 8.77035 9.86712 8.56434L11.5245 3.46353Z"
+                    fill="#000000"
+                  />
+                </svg>
+                4.96
+              </div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">539 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹17,118 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image fifth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Marna, India</div>
+              <div class="star">
+                <svg
+                  width="15px"
+                  height="15px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5245 3.46353C11.6741 3.00287 12.3259 3.00287 12.4755 3.46353L14.1329 8.56434C14.1998 8.77035 14.3918 8.90983 14.6084 8.90983H19.9717C20.4561 8.90983 20.6575 9.52964 20.2656 9.81434L15.9266 12.9668C15.7514 13.0941 15.678 13.3198 15.745 13.5258L17.4023 18.6266C17.552 19.0873 17.0248 19.4704 16.6329 19.1857L12.2939 16.0332C12.1186 15.9059 11.8814 15.9059 11.7061 16.0332L7.3671 19.1857C6.97524 19.4704 6.448 19.0873 6.59768 18.6266L8.25503 13.5258C8.32197 13.3198 8.24864 13.0941 8.07339 12.9668L3.73438 9.81434C3.34253 9.52964 3.54392 8.90983 4.02828 8.90983H9.39159C9.6082 8.90983 9.80018 8.77035 9.86712 8.56434L11.5245 3.46353Z"
+                    fill="#000000"
+                  />
+                </svg>
+                5.0
+              </div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">538 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹155,000 for 5 nights</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="place-image sixth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Chennai, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">534 kilometres away</div>
+              <div class="grey-text">8–13 May</div>
+              <div>₹74,975 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image seventh-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Calangute, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">541 kilometres away</div>
+              <div class="grey-text">11–16 May</div>
+              <div>₹416,524 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image eighth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Arpora, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">541 kilometres away</div>
+              <div class="grey-text">4–9 May</div>
+              <div>₹770,294 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image ninth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Marna, India</div>
+              <div class="star">
+                <svg
+                  width="15px"
+                  height="15px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5245 3.46353C11.6741 3.00287 12.3259 3.00287 12.4755 3.46353L14.1329 8.56434C14.1998 8.77035 14.3918 8.90983 14.6084 8.90983H19.9717C20.4561 8.90983 20.6575 9.52964 20.2656 9.81434L15.9266 12.9668C15.7514 13.0941 15.678 13.3198 15.745 13.5258L17.4023 18.6266C17.552 19.0873 17.0248 19.4704 16.6329 19.1857L12.2939 16.0332C12.1186 15.9059 11.8814 15.9059 11.7061 16.0332L7.3671 19.1857C6.97524 19.4704 6.448 19.0873 6.59768 18.6266L8.25503 13.5258C8.32197 13.3198 8.24864 13.0941 8.07339 12.9668L3.73438 9.81434C3.34253 9.52964 3.54392 8.90983 4.02828 8.90983H9.39159C9.6082 8.90983 9.80018 8.77035 9.86712 8.56434L11.5245 3.46353Z"
+                    fill="#000000"
+                  />
+                </svg>
+                5.0
+              </div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">538 kilometres away</div>
+              <div class="grey-text">9–14 May</div>
+              <div>₹167,500 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image tenth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Vagator, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">540 kilometres away</div>
+              <div class="grey-text">2–7 May</div>
+              <div>₹375,000 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image eleventh-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Panchgani, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">498 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹122,000 for 5 nights</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="place-image twelfth-image">
+              <h4>Guest favourite</h4>
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: rgba(0, 0, 0, 0.5);
+                  height: 24px;
+                  width: 24px;
+                  stroke: var(--linaria-theme_palette-icon-primary-inverse);
+                  stroke-width: 2;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"
+                ></path>
+              </svg>
+              <div class="navigation-button">
+                <svg
+                  id="eoHfNztb05T1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 32 32"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  project-id="3fc6014023164b86a521691c7274d6ce"
+                  export-id="c1b330c4acfb4ebe910b125e968cecd0"
+                  cached="false"
+                >
+                  <ellipse
+                    rx="14.761548"
+                    ry="14.761548"
+                    transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)"
+                    fill="rgba(255,255,255,0.64)"
+                  />
+                  <path
+                    d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28"
+                    transform="matrix(.554137 0 0 0.554137 6.974408 7.773009)"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dots"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                id="eJcDfS5Z01G1"
+                viewBox="0 0 300 300"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+                export-id="be1486128b3b424586d8da4af6a3fa76"
+                cached="false"
+              >
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+                  fill="#fff"
+                  stroke="#fff"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+                <ellipse
+                  rx="30"
+                  ry="30"
+                  transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+                  fill="rgba(210,210,210,0.69)"
+                  stroke="rgba(179,179,179,0.75)"
+                />
+              </svg>
+            </div>
+            <div class="item-text-grid">
+              <div>Reis Magos, India</div>
+              <div class="star"></div>
+            </div>
+            <div class="second-text">
+              <div class="grey-text">539 kilometres away</div>
+              <div class="grey-text">1–6 May</div>
+              <div>₹924,353 for 5 nights</div>
+            </div>
+          </div>
+
+          <!-- 1: Asgaon, India -->
+<div class="item">
+  <div class="place-image thirteenth-image">
+    <!-- Heart Icon -->
+    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display:block; fill:rgba(0,0,0,0.5); height:24px; width:24px; stroke:var(--linaria-theme_palette-icon-primary-inverse); stroke-width:2; overflow:visible;">
+      <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+    </svg>
+    <!-- Navigation Button -->
+    <div class="navigation-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+        <ellipse rx="14.761548" ry="14.761548" transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)" fill="rgba(255,255,255,0.64)"/>
+        <path d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28" transform="matrix(.554137 0 0 .554137 6.974408 7.773009)" fill="none" stroke="#000" stroke-width="4"/>
+      </svg>
+    </div>
+    <!-- Dots Indicator -->
+    <svg
+    class="dots"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="eJcDfS5Z01G1"
+    viewBox="0 0 300 300"
+    shape-rendering="geometricPrecision"
+    text-rendering="geometricPrecision"
+    project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+    export-id="be1486128b3b424586d8da4af6a3fa76"
+    cached="false"
+  >
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+      fill="#fff"
+      stroke="#fff"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+  </svg>
+  </div>
+  <div class="item-text-grid">
+    <div>Asgaon, India</div>
+    <div class="star"></div>
+  </div>
+  <div class="second-text">
+    <div class="grey-text">535 kilometres away</div>
+    <div class="grey-text">1–6 Jun</div>
+    <div>₹813,560 for 5 nights</div>
+  </div>
+</div>
+
+<!-- 2: Parra, India -->
+<div class="item">
+  <div class="place-image fourteen-image">
+    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display:block; fill:rgba(0,0,0,0.5); height:24px; width:24px; stroke:var(--linaria-theme_palette-icon-primary-inverse); stroke-width:2; overflow:visible;">
+      <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+    </svg>
+    <div class="navigation-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+        <ellipse rx="14.761548" ry="14.761548" transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)" fill="rgba(255,255,255,0.64)"/>
+        <path d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28" transform="matrix(.554137 0 0 .554137 6.974408 7.773009)" fill="none" stroke="#000" stroke-width="4"/>
+      </svg>
+    </div>
+    <svg
+    class="dots"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="eJcDfS5Z01G1"
+    viewBox="0 0 300 300"
+    shape-rendering="geometricPrecision"
+    text-rendering="geometricPrecision"
+    project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+    export-id="be1486128b3b424586d8da4af6a3fa76"
+    cached="false"
+  >
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+      fill="#fff"
+      stroke="#fff"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+  </svg>
+  </div>
+  <div class="item-text-grid">
+    <div>Parra, India</div>
+    <div class="star"></div>
+  </div>
+  <div class="second-text">
+    <div class="grey-text">538 kilometres away</div>
+    <div class="grey-text">1–6 May</div>
+    <div>₹110,000 for 5 nights</div>
+  </div>
+</div>
+
+<!-- 3: Saligao, India -->
+<div class="item">
+  <div class="place-image fifteenth-image">
+    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display:block; fill:rgba(0,0,0,0.5); height:24px; width:24px; stroke:var(--linaria-theme_palette-icon-primary-inverse); stroke-width:2; overflow:visible;">
+      <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+    </svg>
+    <div class="navigation-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+        <ellipse rx="14.761548" ry="14.761548" transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)" fill="rgba(255,255,255,0.64)"/>
+        <path d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28" transform="matrix(.554137 0 0 .554137 6.974408 7.773009)" fill="none" stroke="#000" stroke-width="4"/>
+      </svg>
+    </div>
+    <svg
+    class="dots"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="eJcDfS5Z01G1"
+    viewBox="0 0 300 300"
+    shape-rendering="geometricPrecision"
+    text-rendering="geometricPrecision"
+    project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+    export-id="be1486128b3b424586d8da4af6a3fa76"
+    cached="false"
+  >
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+      fill="#fff"
+      stroke="#fff"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+  </svg>
+  </div>
+  <div class="item-text-grid">
+    <div>Saligao, India</div>
+    <div class="star"></div>
+  </div>
+  <div class="second-text">
+    <div class="grey-text">538 kilometres away</div>
+    <div class="grey-text">1–6 May</div>
+    <div>₹92,298 for 5 nights</div>
+  </div>
+</div>
+
+<!-- 4: Candolim, India -->
+<div class="item">
+  <div class="place-image sixteenth-image">
+    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display:block; fill:rgba(0,0,0,0.5); height:24px; width:24px; stroke:var(--linaria-theme_palette-icon-primary-inverse); stroke-width:2; overflow:visible;">
+      <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+    </svg>
+    <div class="navigation-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+        <ellipse rx="14.761548" ry="14.761548" transform="matrix(1.028416 0 0 1.028416 15.780277 16.359551)" fill="rgba(255,255,255,0.64)"/>
+        <path d="M12,4L23.3,15.3c.381143.388844.381143,1.011156,0,1.4L12,28" transform="matrix(.554137 0 0 .554137 6.974408 7.773009)" fill="none" stroke="#000" stroke-width="4"/>
+      </svg>
+    </div>
+    <svg
+    class="dots"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="eJcDfS5Z01G1"
+    viewBox="0 0 300 300"
+    shape-rendering="geometricPrecision"
+    text-rendering="geometricPrecision"
+    project-id="55cf7a45aa7a4bcf82d99c57312ab30a"
+    export-id="be1486128b3b424586d8da4af6a3fa76"
+    cached="false"
+  >
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 42.195502 150)"
+      fill="#fff"
+      stroke="#fff"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 106.312641 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.83333 0 0 0.83333 169.14112 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.65011 0 0 0.65011 226.873261 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+    <ellipse
+      rx="30"
+      ry="30"
+      transform="matrix(.522038 0 0 0.522038 272.733585 150)"
+      fill="rgba(210,210,210,0.69)"
+      stroke="rgba(179,179,179,0.75)"
+    />
+  </svg>
+  </div>
+  <div class="item-text-grid">
+    <div>Candolim, India</div>
+    <div class="star"></div>
+  </div>
+  <div class="second-text">
+    <div class="grey-text">540 kilometres away</div>
+    <div class="grey-text">1–6 May</div>
+    <div>₹128,357 for 5 nights</div>
+  </div>
+</div>
+
+
+        </div>
+      </article>
+    </main>
+    <div class="show-map">
+      Show map<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        role="presentation"
+        focusable="false"
+        style="display: block; height: 16px; width: 16px; fill: white"
+      >
+        <path
+          d="M31.25 3.75a2.29 2.29 0 0 0-1.01-1.44A2.29 2.29 0 0 0 28.5 2L21 3.67l-10-2L2.5 3.56A2.29 2.29 0 0 0 .7 5.8v21.95a2.28 2.28 0 0 0 1.06 1.94A2.29 2.29 0 0 0 3.5 30L11 28.33l10 2 8.49-1.89a2.29 2.29 0 0 0 1.8-2.24V4.25a2.3 2.3 0 0 0-.06-.5zM12.5 25.98l-1.51-.3L9.5 26H9.5V4.66l1.51-.33 1.49.3v21.34zm10 1.36-1.51.33-1.49-.3V6.02l1.51.3L22.5 6h.01v21.34z"
+        ></path>
+      </svg>
+    </div>
+    <div class="mobile-map">
+      Map<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        role="presentation"
+        focusable="false"
+        style="display: block; height: 16px; width: 16px; fill: white"
+      >
+        <path
+          d="M31.25 3.75a2.29 2.29 0 0 0-1.01-1.44A2.29 2.29 0 0 0 28.5 2L21 3.67l-10-2L2.5 3.56A2.29 2.29 0 0 0 .7 5.8v21.95a2.28 2.28 0 0 0 1.06 1.94A2.29 2.29 0 0 0 3.5 30L11 28.33l10 2 8.49-1.89a2.29 2.29 0 0 0 1.8-2.24V4.25a2.3 2.3 0 0 0-.06-.5zM12.5 25.98l-1.51-.3L9.5 26H9.5V4.66l1.51-.33 1.49.3v21.34zm10 1.36-1.51.33-1.49-.3V6.02l1.51.3L22.5 6h.01v21.34z"
+        ></path>
+      </svg>
+    </div>
+  </body>
+  <footer>
+    <div class="footer-alignment">
+      <div class="footer1">
+        <h2>Inspiration for future getaways</h2>
+        <div class="categories">
+          <h3 class="unique-styles">Unique Stays</h3>
+          <h3 class="categories2">Categories</h3>
+        </div>
+        <div class="stays">
+
+          <div class="footer-info">
+            <div class="bold-text">Yurt Rentals</div>
+            <div class="light-text">United Kingdom</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Castle Rentals</div>
+            <div class="light-text">United States</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Houseboats</div>
+            <div class="light-text">United States</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Holiday Caravans</div>
+            <div class="light-text">United Kingdom</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Private Island Rentals</div>
+            <div class="light-text">United States</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Farm Houses</div>
+            <div class="light-text">United States</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Farm Cottages</div>
+            <div class="light-text">United Kingdom</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Cabin Rentals</div>
+            <div class="light-text">Australia</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Luxury Cabins</div>
+            <div class="light-text">United Kingdom</div>
+          </div>
+          
+          <div class="footer-info">
+            <div class="bold-text">Luxury Cabins</div>
+            <div class="light-text">United States</div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="footer2-container">
+          <div class="support">
+            <h3>Support</h3>
+            <h4>Help Centre</h4>
+            <h4>AirCover</h4>
+            <h4>Anti-discrimination</h4>
+            <h4>Disability support</h4>
+            <h4>Cancellation options</h4>
+            <h4>Report neighbourhood concern</h4>
+          </div>
+          <div class="hosting">
+            <h3>Hosting</h3>
+            <h4>Airbnb your home</h4>
+            <h4>AirCover for Hosts</h4>
+            <h4>Hosting resources</h4>
+            <h4>Community forum</h4>
+            <h4>Hosting responsibly</h4>
+            <h4>Join a free Hosting class</h4>
+            <h4>Find a co‑host</h4>
+          </div>
+          <div class="airbnb">
+            <h3>Airbnb</h3>
+            <h4>Newsroom</h4>
+            <h4>New features</h4>
+            <h4>Careers</h4>
+            <h4>Investors</h4>
+            <h4>Airbnb.org emergency stays</h4>
+        </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="footer-left">
+          © 2025 Airbnb, Inc.
+          <span class="separator">·</span>
+          <a href="#" class="footer-link">Privacy</a>
+          <span class="separator">·</span>
+          <a href="#" class="footer-link">Terms</a>
+          <span class="separator">·</span>
+          <a href="#" class="footer-link">Sitemap</a>
+          <span class="separator">·</span>
+          <a href="#" class="footer-link">Company details</a>
+        </div>
+      
+        <div class="footer-right">
+          <div class="footer-item">
+            <svg class="icon"></svg>
+            English (IN)
+          </div>
+          <div class="footer-item">
+            <svg class="icon"></svg>
+            INR
+          </div>
+          <div class="footer-item">
+            <svg class="icon"></svg>
+          </div>
+          <div class="footer-item">
+            <svg class="icon"></svg>
+          </div>
+          <div class="footer-item">
+            <svg class="icon"></svg>
+          </div>
+        </div>
+      </footer>
+      
+    </div>
+  </footer>
+</html>

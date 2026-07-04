@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--Without using br tag, write a vertically aligned form asking for name,city and pincode of a user.-->
+    <form action="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name here" />
+      </div>
+      <div>
+        <label for="city">Select city:</label>
+        <select name="city" id="city" required>
+          <option value="HYD">HYDERABAD</option>
+          <option value="MUMBAI">MUMBAI</option>
+          <option value="BANGLORE">BANGLORE</option>
+          <option value="CHENNAI">CHENNAI</option>
+        </select>
+    </div>
+    <div>
+        <label for="pincode">Enter pincode:</label>
+        <input
+        type="number"
+        name="pincode"
+        id="pincode"
+        placeholder="Enter pincode"
+        />
+    </div>
+    <input type="reset" value="reset" id="city" />
+    </form>
+  </body>
+</html>

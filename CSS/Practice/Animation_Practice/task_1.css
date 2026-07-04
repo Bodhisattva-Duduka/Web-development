@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size:20px;
+    background-color: rgb(206, 206, 206);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    position: relative;
+}
+.button::after{
+    content: "";
+    width: 0%;
+    height: 1.2px;
+    background-color: black;
+    position: absolute;
+    top: 44px;
+    left: 8px;
+}
+.button:hover {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: color 0.7s cubic-bezier(0, 0, 0.11, 1) 1 normal forwards;
+}
+.button:hover::after{
+    animation: underline 0.7s cubic-bezier(0, 0, 0.11, 1) 1 normal forwards;
+}
+@keyframes color {
+    0%{
+    }
+    100%{
+        background-color: black;
+        color: white;
+    }
+}
+@keyframes underline {
+    0%{
+        width: 0%;
+        height: 1.2px;
+    }
+    100%{
+        width: 90%;
+        height: 1.2px
+    }
+}

@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    height: 300px;
+    width: 700px;
+    border: 2px solid black;
+    margin: 3px;
+}
+.box1{
+    background-color: aqua;
+    top: 50px;
+}
+.box2{
+    background-color: rgb(248, 46, 255);
+    position: relative;
+}
+.box3{
+    background-color: rgb(255, 63, 137);
+}
+.box4{
+    background-color: rgb(255, 189, 22);
+}
+.parent{
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+@media only screen and (max-width:455px){
+    .box1, .box2, .box3, .box4{
+        background-color: red;
+        border: 5px solid black;
+    }
+}
+
+/* @media only screen and (orientation: landscape){
+    .box1, .box2, .box3, .box4{
+        background-color: red;
+        border: 5px solid black;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

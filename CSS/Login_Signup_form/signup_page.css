@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --page_background_color:#f4f9c9;
+    --main_block_background_color: #F7CFD8;
+    --item_background_color: #e6abff;
+}
+*{
+    background-color: var(--page_background_color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+}
+.signup_text{
+    font-size: 50px;
+    font-weight: 700;
+    position: relative;
+    background-color: #f4f9c9;
+}
+.items{
+    width: 600px;
+    height: 500px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main_block_background_color);
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--main_block_background_color);
+}
+input{
+    width: 400px;
+    height: 40px;
+    border: 3px solid black;
+    background-color: var(--item_background_color);
+    border-radius: 20px;
+}
+.firstname input, .lastname input, .email_id input {
+    padding-left: 10px;
+}
+details{
+    background-color:var(--main_block_background_color);
+}
+.firstname , .lastname , .email_id{
+    background-color: var(--main_block_background_color);
+    position: relative;
+}
+input[type="radio"]{
+    width: 20px;
+}
+input[type="reset"] {
+    width: 100px;
+    position: relative;
+    right: 90px;
+    border-radius: 20px;
+}
+input[type="submit"]{
+    width: 100px;
+    position: relative;
+    left: 80px;
+    bottom: 59px;
+    border-radius: 20px;
+}
+.reset, .submit ,.gender{
+    background-color: #F7CFD8;
+}
+.gender{
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    gap: 0px 5px;
+    background-color: var(--item_background_color);
+    border-radius: 20px;
+    padding-right: 10px;
+}
+input[type="reset"]:hover , input[type="submit"]:hover{
+    background-color: black;
+    color: white;
+}

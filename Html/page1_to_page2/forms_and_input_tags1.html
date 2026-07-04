@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Forms and Input Tags</title>
+  </head>
+  <body>
+    <h1 id="Application_form">Application Form</h1>
+    <form action="post">
+      <div>
+        <label for="username" id="username">Enter your username:</label>
+        <input
+          type="text"
+          id="username_1"
+          name="username"
+          placeholder="Enter here"
+        />
+      </div>
+      <div>
+        <a href="Car.jpg" download="Car_image_from_device"
+          ><input type="button" value="Download from device" id="download_button"
+        /></a>
+        <a
+          href="https://wallup.net/wp-content/uploads/2017/11/23/533023-Lamborghini-car-car_show-photography-black_cars-luxury_cars.jpg" target="_blank"
+          download="Car_image_from_link"
+          ><input type="button" value="Download from link"
+        /></a>
+      </div>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" />
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" />
+      </div>
+      <div>
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label for="checkbox">Subscribe to newsletter</label>
+      </div>
+      <div>
+        <label for="textarea">Enter your comment here:</label>
+        <br />
+        <textarea name="textarea" id="textarea" rows="2" cols="29"></textarea>
+      </div>
+      <div>
+        <label for="Select">Select</label>
+        <select name="fruits" id="Select">
+          <option value="apple">apple</option>
+          <option value="banana">banana</option>
+          <option value="cherry">cherry</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <input type="file" name="file" id="file" />
+      </div>
+      </form>
+  </body>
+</html>

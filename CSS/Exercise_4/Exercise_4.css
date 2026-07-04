@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg_colour: rgb(241, 164, 255);
+    --item_bg_colour:rgb(228, 205, 255);
+    --text_colour: rgb(107, 0, 229);
+    --font: "Poppins", sans-serif;
+    --font_weight: 600;
+    --font_style: normal;
+    --font_size: 25px
+}
+*{
+    background-color: var(--bg_colour);
+    margin: 0;
+    padding: 0;
+}
+ul{
+    display: flex;
+    list-style: none;
+    background-color: var(--item_bg_colour);
+    padding: 20px;
+}
+ul li{
+    padding: 0px 20px;
+    color: var(--text_colour);
+    font-family: var(--font);
+    font-weight: var(--font_weight);
+    font-style: var(--font_style);
+    background-color: var(--item_bg_colour);
+    font-size: var(--font_size);
+}
+a, :visited{ 
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 455px){
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 10px 0px 10px 0px;
+        width: 150px;
+    }
+    .contact {
+        padding-bottom: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

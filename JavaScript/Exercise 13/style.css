@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: white;
+}
+
+.container {
+  min-width: calc(246px + 330px);
+  height: auto;
+  padding: 4px;
+  /* border: 2px solid black; */
+  background-color: #0f0f0f;
+}
+.card {
+  display: grid;
+  grid-template-columns: 246px minmax(305px, auto);
+  grid-template-rows: 1fr;
+}
+.image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  /* border: 2px solid black; */
+  position: relative;
+}
+.image img {
+  border-radius: 13px;
+}
+.time{
+  position: absolute;
+  bottom: 8px;
+  right: 6px;
+  background-color: rgba(0, 0, 0, 0.744);
+  font-size: 14px;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.text-part {
+  margin: 5px;
+  width: 100%;
+  height: auto;
+  /* border: 2px solid black; */
+}
+.title{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.details{
+  margin-left: 5px;
+  font-size: 15px;
+}
+.details span {
+  color: #aaa;
+}
