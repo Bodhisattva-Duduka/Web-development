@@ -12,8 +12,10 @@
     color: rgb(115, 0, 255);
     background-color: bisque;
 }
-#textarea , #file {
-    background-color: cadetblue;
+#textarea{
+    background-color: rgb(230, 254, 255);
+    width: 300px;
+    height: 150px;
 }
 #download_button{
     background-color: rgb(213, 151, 255);
